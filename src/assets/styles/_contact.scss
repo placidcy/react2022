@@ -1,0 +1,41 @@
+.contact {
+    font-family: var(--main_font);
+    font-size: 10vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--white);
+
+    .contact__inner {
+        width: 90vw;
+        margin: 0 auto;
+
+        p {
+            opacity: 0;
+            transform: translateY(100px);
+            
+            &:nth-child(1){
+                margin-left: 0vw;
+                margin-bottom: -6vw;
+            }
+            &:nth-child(2){
+                margin-left: 16%;
+                margin-bottom: -6vw;
+            }
+            &:nth-child(3){
+                margin-left: 32%;
+            }
+            &:nth-child(4){
+                margin-left: auto;
+                width: 20vw;
+                font-size: 0.8vw;
+                font-family: var(--kor_font);
+                line-height: 1.8;
+                font-weight: 300;
+            }
+        }
+    }
+    
+}

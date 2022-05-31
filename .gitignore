@@ -1,0 +1,7 @@
+#깃에 올리지 않을 것들
+# dependencies
+/node_modules
+
+# production
+# /build
+
