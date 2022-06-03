@@ -12,7 +12,7 @@ import { gsap } from "gsap";
 //require('dotenv').config() //npm i dotenv
 
 function Youtube() {
-    const [videos, setVideos] = useState([]);   //왼쪽,오른쪽 성질이 다르지만 아무튼 오른쪽에 있는 값 왼쪽에서 불러오기 가능
+    const [videos, setVideos] = useState([]);   //오른쪽에 있는 값을 왼쪽에서 불러오기 가능
 
     const mainAnimation = () => {
         setTimeout(() => {
@@ -64,19 +64,20 @@ function Youtube() {
             redirect: 'follow'
           };
           
-          fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&type=video&maxResults=30&q=${query}&key=${process.env.REACT_YOUTUBE_API_KEY}`, requestOptions)
+          fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&type=video&maxResults=30&q=${query}&key=${process.env.YOUTUBE_API_KEY}`, requestOptions)
             .then(response => response.json())
             .then(result => setVideos(result.items))
             .catch(error => console.log('error', error));
     }
 
-    useEffect(() => { //값이 바뀔때마다 감지
+    //값이 바뀔때마다 감지
+    useEffect(() => { 
         var requestOptions = {
             method: 'GET',
             redirect: 'follow'
           };
           
-          fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&type=video&maxResults=30&q=linkinpark&key=${process.env.REACT_YOUTUBE_API_KEY}`, requestOptions)
+          fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&type=video&maxResults=30&q=linkinpark&key=${process.env.YOUTUBE_API_KEY}`, requestOptions)
             .then(response => response.json())
             .then(result => {
                 setVideos(result.items);

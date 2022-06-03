@@ -2,7 +2,7 @@ import React from 'react';
 import YoutubeItem from "./YoutubeItem";
 
 function YoutubeList(props) {
-    // console.log(props.lists.data.items)
+    //console.log(props.videos);
   return (
         <div className="youtube__list">
             <ul>
