@@ -77,7 +77,7 @@ function Movie(){
             redirect: 'follow'
           };
           
-          fetch(`https://api.themoviedb.org/3/search/movie?api_key=${process.env.MOVIE_API_KEY}&query=${query}`, requestOptions)
+          fetch(`https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_API_KEY_MOVIE}&query=${query}`, requestOptions)
             .then(response => response.json())
             .then(result => setVideos(result.results))
             .catch(error => console.log('error', error));
@@ -89,7 +89,7 @@ function Movie(){
             redirect: 'follow'
           };
           
-          fetch(`https://api.themoviedb.org/3/search/movie?api_key=${process.env.MOVIE_API_KEY}&query=fear`, requestOptions)
+          fetch(`https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_API_KEY_MOVIE}&query=science`, requestOptions)
             .then(response => response.json())
             .then(result => {
                 setVideos(result.results)
